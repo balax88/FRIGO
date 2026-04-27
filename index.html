@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -690,7 +691,8 @@ Poi al termine: 💡 Consiglio: ...`;
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'anthropic-dangerous-direct-browser-access': 'true'
+        'anthropic-dangerous-direct-browser-access': 'true',
+        'x-api-key': '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'
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
@@ -860,7 +862,8 @@ async function matchProductWithAI(ean, productName) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'anthropic-dangerous-direct-browser-access': 'true'
+        'anthropic-dangerous-direct-browser-access': 'true',
+        'x-api-key': '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'
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
