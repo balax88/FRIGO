@@ -1329,8 +1329,8 @@ ${itemList}`
     });
     const data = await resp.json();
     const text = data.content?.[0]?.text || '';
-    const json = JSON.parse(text.replace(/```json|```/g, '').trim());
-
+   const match = text.match(/\{[\s\S]*\}/);
+const json = JSON.parse(match ? match[0] : text);
     if (json.matched) {
       const item = ITEMS.find(i => i.id === json.item_id);
       if (item) {
